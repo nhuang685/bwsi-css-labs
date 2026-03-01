@@ -60,6 +60,13 @@ def main():
     operation = (
         input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
     )
+    while operation not in ["add", "subtract", "multiply", "divide"]:
+        print("Invalid input. Please enter a valid operation.")
+        operation = (
+            input("Enter the operation (add, subtract, multiply, divide): ")
+            .strip()
+            .lower()
+        )
 
     # Perform the calculation and display the result
     result = simple_calculator(operation, num1, num2)
